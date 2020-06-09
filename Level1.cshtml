@@ -1,0 +1,158 @@
+@{
+    ViewData["Title"] = "Level 1";
+}
+
+    <div class="well">
+
+        <h1 style="text-align: center; margin-bottom: 50px">  Page 1 - Level 1  </h1>
+
+        <p> All Women Leagues </p>
+        <ul>
+        @foreach(var league in ViewBag.WomensLeagues)
+        {   <li> 
+                @league.Name 
+            </li>
+        }
+        </ul>
+
+
+        <p> All Hockey Sports </p>
+        <ul>
+        @foreach(var league in ViewBag.hockeySports)
+        {   <li> 
+                @league.Name 
+            </li>
+        }
+        </ul>
+
+
+        <p> All non-football related sports </p>
+        <ul>
+        @foreach(var league in ViewBag.notFootball)
+        {   <li> 
+                @league.Name 
+            </li>
+        }
+        </ul>
+
+
+        <p> All leagues that call themselves "conferences" </p>
+        <ul>
+        @foreach(var league in ViewBag.conferences)
+        {   <li> 
+                @league.Name 
+            </li>
+        }
+        </ul>
+
+
+        <p> All teams in the Atlanta area </p>
+        <ul>
+        @foreach(var league in ViewBag.Atlantic)
+        {   <li> 
+                @league.Name 
+            </li>
+        }
+        </ul>
+
+
+        <p> All Dallas based teams </p>
+        <ul>
+        @foreach(var team in ViewBag.Dallas)
+        {   <li> 
+                The @team.TeamName 
+            </li>
+        }
+        </ul>
+
+
+        <p> All teams with the "Raptors" in the name </p>
+        <ul>
+        @foreach(var team in ViewBag.raptors)
+        {   <li> 
+                The @team.Location @team.TeamName 
+            </li>
+        }
+        </ul>
+
+
+        <p> All teams with the "City" in the team location </p>
+        <ul>
+        @foreach(var team in ViewBag.city)
+        {   <li> 
+                The @team.Location @team.TeamName 
+            </li>
+        }
+        </ul>
+
+
+        <p> All teams with a "T" as the first letter in their name </p>
+        <ul>
+        @foreach(var team in ViewBag.tName)
+        {   <li> 
+                The @team.TeamName 
+            </li>
+        }
+        </ul>
+
+
+        <p> All teams ordered by location </p>
+        <ul>
+        @foreach(var team in ViewBag.locationOrder)
+        {   <li> 
+                The @team.Location @team.TeamName 
+            </li>
+        }
+        </ul>
+
+
+        <p> All teams ordered by team name in reverse </p>
+        <ul>
+        @foreach(var team in ViewBag.nameOrder)
+        {   <li> 
+                The @team.TeamName 
+            </li>
+        }
+        </ul>
+
+
+        <p> All players with last name "Cooper" </p>
+        <ul>
+        @foreach(var player in ViewBag.Cooper)
+        {   <li> 
+                The @player.FirstName @player.LastName 
+            </li>
+        }
+        </ul>
+
+
+        <p> All players with first name "Joshua" </p>
+        <ul>
+        @foreach(var player in ViewBag.Joshua)
+        {   <li> 
+                The @player.FirstName @player.LastName 
+            </li>
+        }
+        </ul>
+
+
+        <p> All players with last name "Cooper", expect those with first name "Joshua" </p>
+        <ul>
+        @foreach(var player in ViewBag.CooperNotJoshua)
+        {   <li> 
+                The @player.FirstName @player.LastName 
+            </li>
+        }
+        </ul>
+
+
+        <p> All players with first name "Alexander" or "Wyatt" </p>
+        <ul>
+        @foreach(var player in ViewBag.AlexanderOrWyatt)
+        {   <li> 
+                The @player.FirstName @player.LastName 
+            </li>
+        }
+        </ul>
+
+    </div>
